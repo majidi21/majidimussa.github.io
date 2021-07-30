@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navbar{
+    background-image: linear-gradient(to right, #f8c5df, #f8bad9);
+    padding: 0 !important;
+}
+.navbar-nav li a{
+    color:#555 !important;
+    font-weight: 600px;
+}
+.navbar-brand img{
+    height: 80px;
+    padding-left: 20px;
+}
+#banner{
+    background-image: linear-gradient(to right, #f8c5df, #f8bad9);
+    color: #555;
+    padding-top: 5%;
+}
+.promo-title{
+    font-size: 40px;
+    font-weight: 600px;
+    margin-top: 90px;
+
+}
+.btn{
+    display: inline-block;
+    background-image: linear-gradient(to right, #d67047, #e23131);
+    padding: 8px 30px;
+    margin: 20px 0;
+    border-radius: 30px;
+    transition: backgound 0.5s;
+}
+.btn:hover{
+    border-radius: 30px;
+    background: rebeccapurple;
+}
+#services{
+    background-image: linear-gradient(to right, #f8c5df, #f8bad9);
+    padding: 100px;
+}
+.mjdimg{
+    width: 250px;
+    margin-top: 20px;
+}
+#product{
+    background-image: linear-gradient(to right, #f8c5df, #f8bad9);
+    padding: 100px;
+}
+.majid{
+    width: 80px;
+    margin-top: 20px;
+}
+#offer{
+    background-image: linear-gradient(to right, #f8c5df, #f8bad9);
+    padding: 100px;
+}
+.kavea{
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.col-md-7{
+    margin-left: 70px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.testmonials{
+    margin-top: 60px;
+    border-left: 4px;
+    margin-bottom: 50px;
+}
+.testmonials img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 220px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copy-right{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
