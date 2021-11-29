@@ -44,7 +44,7 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNTA5OTR9LCJjb250ZW50UmlnaHRzIjpbeyJjb250ZW50SWQiOiIxOTc4NjAzNzk2Iiwic3RhcnQiOiIyMDIxLTExLTI5VDEwOjEzOjUwWiIsImVuZCI6IjIwMjEtMTItMjlUMTA6MTM6NTBaIiwidXNhZ2VSdWxlc1Byb2ZpbGVJZCI6IlNEIn1dLCJleHAiOjE2MzgxOTE2MzB9.MoDDwsSlJnFqd0zbzJPR52hBXdb5dKwKUuj69c-S7wk';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo0MjM2MzMxfSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTk3ODYwMzc5NiIsInN0YXJ0IjoiMjAyMS0xMS0yOVQxNDozMjowMloiLCJlbmQiOiIyMDIxLTEyLTI5VDE0OjMyOjAyWiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM4MjA3MTIyfQ.q62VP3sqHaHqOo1-IiezfQxxsIYxTd3s-waP8jo6wj4';
                     }
                 });
                 try {
@@ -69,5 +69,5 @@
             document.addEventListener('shaka-ui-loaded', init);
             document.addEventListener('shaka-ui-load-failed', initFailed);
         </script>
-        
+       
 </html>
