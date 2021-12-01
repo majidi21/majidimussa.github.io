@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- customization -->
+        <title>MakumbaTV</title>
+        <link rel='icon' href='https://majidi21.github.io/icon/makumba.png'>
+        <style>
+            div a img {
+                visibility: hidden;
+            }
+        </style>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+        <meta name='referrer' content='no-referrer'/>
+        <!-- end customization -->
+        <!-- propeller -->
+        <script>(function(s,u,z,p){
+            s.src=u,
+            s.setAttribute('data-zone',z),
+            p.appendChild(s);
+            }
+            )(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4694348,document.body||document.documentElement)
+        </script>
+        <!-- end propeller -->
+        <!-- shaka player -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.7/shaka-player.ui.min.js' crossorigin='anonymous'></script>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.7/controls.min.css' crossorigin='anonymous'/>
+        <!-- end shaka player -->
+    </head>
+    <body>
+        <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+            <video autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
+        </div>
+        <script>
+            async function init() {
+                const video = document.getElementById('video');
+                const ui = video['ui'];
+                const controls = ui.getControls();
+                const player = controls.getPlayer();
+                player.configure({
+                    drm: {
+                        servers: {
+                            'com.widevine.alpha': 'https://azy4sj9b.anycast.nagra.com/AZY4SJ9B/wvls/contentlicenseservice/v1/licenses'
+                        }
+                    }
+                });
+                window.player = player;
+                window.ui = ui;
+                player.addEventListener('error', onPlayerErrorEvent);
+                controls.addEventListener('error', onUIErrorEvent);
+                player.getNetworkingEngine().registerRequestFilter(function(type, request) {
+                    if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
+                        request.headers['nv-tenant-id'] = 'AZY4SJ9B';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo2MDQ2MjU4fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTU4MTI3MTQ5NyIsInN0YXJ0IjoiMjAyMS0xMi0wMVQxMTo0NToyMloiLCJlbmQiOiIyMDIyLTAxLTAxVDExOjQ1OjIyWiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM4MzY5OTIyfQ.SxOV7t2MSHTT2Exzm8wDz2OikMw34uG1NRG4JvX78CQ';
+                    }
+                });
+                try {
+                    await player.load('https://1581271497.rsc.cdn77.org/1581271497/Manifest.mpd');
+                    console.log('The video has now been loaded!');
+                } catch (error) {
+                    onPlayerError(error);
+                }
+            }
+            function onPlayerErrorEvent(errorEvent) {
+                onPlayerError(event.detail);
+            }
+            function onPlayerError(error) {
+                console.error('Error code', error.code, 'object', error);
+            }
+            function onUIErrorEvent(errorEvent) {
+                onPlayerError(event.detail);
+            }
+            function initFailed(errorEvent) {
+                console.error('Unable to load the UI library!');
+            }
+            document.addEventListener('shaka-ui-loaded', init);
+            document.addEventListener('shaka-ui-load-failed', initFailed);
+        </script>
+        <script type='text/javascript' src='https://www.stat-counter.org/count/8o14'></script>
+</html>
