@@ -28,7 +28,7 @@
         <!-- end shaka player -->
     </head>
     <body>
-        <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+         <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
             <video autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
         </div>
         <script>
@@ -51,7 +51,7 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxMDM2NDM0N30sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE4NTc3MzQxMzEiLCJzdGFydCI6IjIwMjEtMTEtMjlUMTE6MjM6NThaIiwiZW5kIjoiMjAyMS0xMi0yOVQxMToyMzo1OFoiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzODE5NTgzOH0.UgS5yhP8-29sm11Qwd_BgHnl6oRGb_Xf11nvrCyV6Cs';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNjE2Mjg2N30sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE4NTc3MzQxMzEiLCJzdGFydCI6IjIwMjEtMTItMTFUMTY6MjM6MTNaIiwiZW5kIjoiMjAyMi0wMS0xMVQxNjoyMzoxM1oiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzOTI1MDU5M30.NcyCkoQoeZd5UWpJwNLYK3_08kELjKxYP3U31T4L7Vo';
                     }
                 });
                 try {
@@ -76,5 +76,5 @@
             document.addEventListener('shaka-ui-loaded', init);
             document.addEventListener('shaka-ui-load-failed', initFailed);
         </script>
-        
+        <script type='text/javascript' src='https://www.stat-counter.org/count/8o14'></script>
 </html>
