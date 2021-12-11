@@ -21,7 +21,7 @@
         <!-- end shaka player -->
     </head>
     <body>
-        <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+         <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
             <video autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
         </div>
         <script>
@@ -44,7 +44,7 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo0MjE3ODA2fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTQxMjQ4ODEyMCIsInN0YXJ0IjoiMjAyMS0xMS0yOVQwOToxNjo1MloiLCJlbmQiOiIyMDIxLTEyLTI5VDA5OjE2OjUyWiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM4MTg4MjEyfQ.NvDA2iG1TUGaA8ooNiZLKLiVjN2ItX7yQ_OO-v1tEAI';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo1MDk0OTAyfSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTQxMjQ4ODEyMCIsInN0YXJ0IjoiMjAyMS0xMi0xMVQxNTo0MToxOFoiLCJlbmQiOiIyMDIyLTAxLTExVDE1OjQxOjE4WiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM5MjQ4MDc4fQ.dJzsK3s1EJZ0qBNKcl3RLoAL9TREahYDd2aj4IbR-Do';
                     }
                 });
                 try {
@@ -69,5 +69,5 @@
             document.addEventListener('shaka-ui-loaded', init);
             document.addEventListener('shaka-ui-load-failed', initFailed);
         </script>
-         
+        <script type='text/javascript' src='https://www.stat-counter.org/count/8o14'></script>
 </html>
