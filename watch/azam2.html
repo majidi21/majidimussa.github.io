@@ -21,7 +21,7 @@
         <!-- end shaka player -->
     </head>
     <body>
-        <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+       <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
             <video autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
         </div>
         <script>
@@ -44,7 +44,7 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxMjAyNDM0NX0sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE2MTMxMDUxODAiLCJzdGFydCI6IjIwMjEtMTItMDFUMTM6NDc6MDNaIiwiZW5kIjoiMjAyMi0wMS0wMVQxMzo0NzowM1oiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzODM3NzIyM30.86yLaFV6Fj1dLGzsyjJjsWUo3GgrVJ-T0OFtRLVQ4PE';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNTc3OTQ4Mn0sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE2MTMxMDUxODAiLCJzdGFydCI6IjIwMjEtMTItMTFUMTU6MjY6MTVaIiwiZW5kIjoiMjAyMi0wMS0xMVQxNToyNjoxNVoiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzOTI0NzE3NX0.hJHl0H0IrQsyNbK3H2ScXxyNs6_KIpNHWPK0yCnQdzw';
                     }
                 });
                 try {
