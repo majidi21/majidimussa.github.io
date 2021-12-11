@@ -13,7 +13,13 @@
         <meta name='referrer' content='no-referrer'/>
         <!-- end customization -->
         <!-- propeller -->
-        
+        <script>(function(s,u,z,p){
+            s.src=u,
+            s.setAttribute('data-zone',z),
+            p.appendChild(s);
+            }
+            )(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4694348,document.body||document.documentElement)
+        </script>
         <!-- end propeller -->
         <!-- shaka player -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.7/shaka-player.ui.min.js' crossorigin='anonymous'></script>
@@ -44,7 +50,7 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxMzE2NzAyOH0sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjEwMTg1MjA4NDAiLCJzdGFydCI6IjIwMjEtMTEtMjlUMDk6MTg6MjNaIiwiZW5kIjoiMjAyMS0xMi0yOVQwOToxODoyM1oiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzODE4ODMwM30.E9kvqLgWGn1eMyhCZMLiiH4MBELog5LUWY1_4NpE9_Q';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo1MTA5NzI0fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTAxODUyMDg0MCIsInN0YXJ0IjoiMjAyMS0xMi0xMVQxNjoxNzo0MloiLCJlbmQiOiIyMDIyLTAxLTExVDE2OjE3OjQyWiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM5MjUwMjYyfQ.uqIJ4r3u6AY5UZisHsAsu7UAEqd51CiS3Mw7zf7Ux8M';
                     }
                 });
                 try {
@@ -69,5 +75,5 @@
             document.addEventListener('shaka-ui-loaded', init);
             document.addEventListener('shaka-ui-load-failed', initFailed);
         </script>
-         
+        <script type='text/javascript' src='https://www.stat-counter.org/count/8o14'></script>
 </html>
