@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Shaka Player build -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/1.6.5/shaka-player.compiled.js"></script>
-
-<!-- Streamroot builds -->
-<script src="https://cdn.streamroot.io/xhr-proxy/1/beta/xhr-proxy.js"></script>
-<script src="https://cdn.streamroot.io/shakaplayer1-interactor/1/beta/shakaplayer1-interactor.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <video id="demoplayer"></video>
-<script>
-  var videoElement = document.getElementById("demoplayer");
-  var player = new shaka.player.Player(videoElement);
-
-  // Link Streamroot interactor to the player
-  // It must ALWAYS be called before the `load` method of the player
-  StreamrootShakaPlayer1Interactor.create()
-    .streamrootKey("<eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNjE3MDM0fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTk3ODYwMzc5NiIsInN0YXJ0IjoiMjAyMS0xMi0xMlQxMzozODoyOFoiLCJlbmQiOiIyMDIyLTAxLTEyVDEzOjM4OjI4WiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM5MzI3MTA4fQ.9hS5OvjlgYZ8DapR3IF5FgVqtK5hONZK99RWShcbYvo>")
-    .streamrootConfig({})
-    .linkPlayer(player);
-  
-  var contentUrl = "<https://1978603796.rsc.cdn77.org/1978603796/Manifest.mpd>";
-  var playerConfig = { streamBufferSize: 30 };
-  var estimator = new shaka.util.EWMABandwidthEstimator();
-  var source = new shaka.player.DashVideoSource(contentUrl, null, estimator);
-
-  player.configure({
-                    drm: {
-                        servers: {
-                            'com.widevine.alpha': 'https://azy4sj9b.anycast.nagra.com/AZY4SJ9B/wvls/contentlicenseservice/v1/licenses'
-                        }
-                    }
-                });
-  player.load(source);
-</script>
-
-</body>
+<html>
+    <head>
+        <!-- customization -->
+        <title>MakumbaTV</title>
+        <link rel='icon' href='https://majidi21.github.io/icon/makumba.png'>
+        <style>
+            div a img {
+                visibility: hidden;
+            }
+        </style>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+        <meta name='referrer' content='no-referrer'/>
+        <!-- end customization -->
+        <!-- propeller -->
+        <script>(function(s,u,z,p){
+            s.src=u,
+            s.setAttribute('data-zone',z),
+            p.appendChild(s);
+            }
+            )(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4694348,document.body||document.documentElement)
+        </script>
+       
+        <!-- end propeller -->
+        <!-- shaka player -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.7/shaka-player.ui.min.js' crossorigin='anonymous'></script>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.7/controls.min.css' crossorigin='anonymous'/>
+        <!-- end shaka player -->
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+	    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <iframe width="100%" height="655px" src="https://www.youtube.com/embed/-upyPouRrB8?modestbranding=1&autoplay=1&loop=1&controls=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </body>
+        
 </html>
