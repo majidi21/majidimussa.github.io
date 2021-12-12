@@ -2,8 +2,8 @@
 <html>
     <head>
         <!-- customization -->
-        <title>MakumbaTV</title>
-        <link rel='icon' href='https://majidi21.github.io/icon/makumba.png'>
+        <title>KabangaTV</title>
+        <link rel='icon' href='https://kabanga.ga/assets/favicon.png'>
         <style>
             div a img {
                 visibility: hidden;
@@ -13,12 +13,13 @@
         <meta name='referrer' content='no-referrer'/>
         <!-- end customization -->
         <!-- propeller -->
-        <script>(function(s,u,z,p){
-            s.src=u,
-            s.setAttribute('data-zone',z),
-            p.appendChild(s);
+        <script>
+            (function(s, u, z, p) {
+                s.src = u,
+                s.setAttribute('data-zone', z),
+                p.appendChild(s);
             }
-            )(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4694348,document.body||document.documentElement)
+            )(document.createElement('script'), 'https://iclickcdn.com/tag.min.js', 4328307, document.body || document.documentElement)
         </script>
         <!-- end propeller -->
         <!-- shaka player -->
@@ -27,7 +28,7 @@
         <!-- end shaka player -->
     </head>
     <body>
-       <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+        <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
             <video autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
         </div>
         <script>
@@ -50,11 +51,11 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjo3NzM5MTk0fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTk3ODYwMzc5NiIsInN0YXJ0IjoiMjAyMS0xMi0xMVQxNDozNTo1NFoiLCJlbmQiOiIyMDIyLTAxLTExVDE0OjM1OjU0WiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM5MjQ0MTU0fQ.vVcgh5jIC5aKgznbzXueym383HkJoNZHV5x4MtYbTTA';
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNjE3MDM0fSwiY29udGVudFJpZ2h0cyI6W3siY29udGVudElkIjoiMTk3ODYwMzc5NiIsInN0YXJ0IjoiMjAyMS0xMi0xMlQxMzozODoyOFoiLCJlbmQiOiIyMDIyLTAxLTEyVDEzOjM4OjI4WiIsInVzYWdlUnVsZXNQcm9maWxlSWQiOiJTRCJ9XSwiZXhwIjoxNjM5MzI3MTA4fQ.9hS5OvjlgYZ8DapR3IF5FgVqtK5hONZK99RWShcbYvo';
                     }
                 });
                 try {
-                    await player.load('https://1978603796.rsc.cdn77.org/1978603796/Manifest.mpd');
+                    await player.load('https://kabanga.tk/watch/?c=1978603796');
                     console.log('The video has now been loaded!');
                 } catch (error) {
                     onPlayerError(error);
