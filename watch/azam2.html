@@ -50,8 +50,8 @@
                 player.getNetworkingEngine().registerRequestFilter(function(type, request) {
                     if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
                         request.headers['nv-tenant-id'] = 'AZY4SJ9B';
-                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxNTc3OTQ4Mn0sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE2MTMxMDUxODAiLCJzdGFydCI6IjIwMjEtMTItMTFUMTU6MjY6MTVaIiwiZW5kIjoiMjAyMi0wMS0xMVQxNToyNjoxNVoiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzOTI0NzE3NX0.hJHl0H0IrQsyNbK3H2ScXxyNs6_KIpNHWPK0yCnQdzw';
-                    }
+                        request.headers['nv-authorizations'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMzNjA1MiJ9.eyJ0eXAiOiJDb250ZW50QXV0aFoiLCJ2ZXIiOiIxLjAiLCJ0ZW5hbnRJZCI6IkFaWTRTSjlCIiwiZGV2aWNlIjp7IndhdGVybWFya0lkIjoxMzgzODY4OX0sImNvbnRlbnRSaWdodHMiOlt7ImNvbnRlbnRJZCI6IjE2MTMxMDUxODAiLCJzdGFydCI6IjIwMjEtMTItMTNUMTA6MTg6NDZaIiwiZW5kIjoiMjAyMi0wMS0xM1QxMDoxODo0NloiLCJ1c2FnZVJ1bGVzUHJvZmlsZUlkIjoiU0QifV0sImV4cCI6MTYzOTQwMTUyNn0.54ofGw0tnsDJYdc6vj-Tx3Onn_Iz5zV2bgXOTWgapZ4';
+                    } 
                 });
                 try {
                     await player.load('https://1613105180.rsc.cdn77.org/1613105180/Manifest.mpd');
